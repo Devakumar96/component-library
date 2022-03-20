@@ -1,65 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
-*,
-*::after,
-*::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 :root{
---primary-color:#2d3047;
---secondrary-color:#dc758f;
---text-color:#e3d3e4;
+--clr-primary:#E0DDAA;
+--clr-secondary:#203239;
+--clr-color:#141E27;
+--clr-mark:#85F4FF;
+--clr-color:#151D3B;
 --clr-white:#fff;
 --clr-black:#000;
+--clr-BG:#42C2FF
 }
+
 html{
-  font-size: 16px;
+    font-size: 16px;
 }
+
 body{
-  font-family: 'League Spartan', sans-serif;
-  background-color: var(--text-color);
-  color: var(--clr-black);
+    font-family: 'PT Serif', serif;
+font-family: 'Roboto Slab', serif;
+background-color: var(--clr-primary);
+color: var(--clr-secondary);
 }
-hr{
-  margin: 2rem;
-}
-.text-sm{
-  font-size: 0.8rem;
-}
-.container-fluid{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+
 a{
-  text-decoration: none;
+    text-decoration: none;
 }
-.container{
-    margin: auto;
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.text-sm{
+    font-size: 0.8rem;
+}
+
+/* Containers */
+.container-fluid{
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 85%;
 }
-.title{
+
+.container {
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 70%;
+}
+
+/* Link Buttons */
+
+.btn {
+  width: max-content;
+  min-width: 9rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+  display: inline-block;
+}
+.btn-primary{
+    background-color: var(--clr-color);
+    text-decoration: none;
+    color: var(--clr-mark);
+}
+
+.btn-secondary{
+    background-color: var(--clr-color);
+    text-decoration: none;
+    color: var(--clr-mark);
+}
+
+.btn-primary-outline {
+  border: 2px solid var(--clr-black);
+  background-color: var(--clr-text);
+}
+
+.btn-secondary-outline {
+  border: 2px solid var(--clr-black);
+  background-color: var(--clr-text);
+}
+
+.unordered{
+    list-style: none;
+    margin: 1rem;
+}
+
+.list-inline li{
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+.nav {
+  background-color: var(--clr-BG);
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+  color: (--clr-text);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; 
+}
+
+.nav .brand{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+.nav ul{
+  display:inline-block;
   text-align: center;
-  margin: 1.5rem auto;
-  text-transform: uppercase;
-  text-decoration: underline;
+  
 }
-.description{
-  width: 80%;
-  margin: 0.25rem auto;
+
+.nav ul li{
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    text-align: right;
 }
-.description p {
-  margin: 01.5rem auto;
+
+.nav ul li a{
+color: #151D3B;
 }
-.link-title{
-  text-align: center;
-  margin: 1.2rem;
-  text-decoration: underline;
+
+/* HEADER */
+
+.container-hero img{
+    width: 360px;
+    height: auto;
+    border: 1rem solid var(--clr-primary);
+    border-radius: 50%;
+    display: block;
+}
+
+.img-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-primary);
+}
+
+.section {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.section-dark{
+    background-color: var(--clr-mark);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.section-dark h2{
+    color:blueviolet;
+}
+
+.footer-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2rem 2rem;
+}
+
+/* Global CSS */
+
+/* Custom CSS */
+
+.title {
+    text-align: center;
+    margin: 1.5rem auto;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.description {
+    width: 90%;
+    margin: 0.5rem auto;
+}
+
+.description p{
+    margin: 0.25rem auto;
+}
+.mark{
+    background-color: var(--clr-mark);
+    padding: 0.2rem 0.50rem;
 }
 .section-title{
-  text-align: center;
-  margin: 1.2rem;
-  text-decoration: underline;
-}
+    text-align: center;
+    color: var(--clr-color);
